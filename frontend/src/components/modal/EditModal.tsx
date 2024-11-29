@@ -98,7 +98,7 @@ const EditContactModal: React.FC<EditModalProps> = ({ open, handleClose, contact
 
                         {/* Close Icon */}
                         <div className='border-b-4 text-2xl font-bold border-gray-400 p-4 flex items-center justify-between'>
-                            <h1> Edit Admin</h1>
+                            <h1> Edit Contact</h1>
                             <IoIosClose
                                 onClick={handleClose}
                                 className=" cursor-pointer"

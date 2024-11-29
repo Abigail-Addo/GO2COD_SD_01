@@ -14,7 +14,7 @@ import { getAllContacts, getSingleContact, deleteContact } from "@/lib/features/
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import AlertDialog from "@/components/dialogue/Dialogue";
 import { toast } from "react-toastify";
-import EditAdminModal from "@/components/modal/EditModal";
+import EditContactModal from "@/components/modal/EditModal";
 import { useRouter } from "next/navigation";
 import { stringify } from 'querystring';
 
@@ -444,7 +444,7 @@ const Home = () => {
       </div>
 
       {/* Edit modal */}
-      <EditAdminModal
+      <EditContactModal
         open={openModal}
         handleClose={showModal(false)}
         contactData={selectedContact}
