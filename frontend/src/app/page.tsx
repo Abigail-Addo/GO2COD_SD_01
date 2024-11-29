@@ -245,7 +245,7 @@ const Home = () => {
         type: 'actions',
         width: 80,
         renderHeader: () => (
-          <p className='font-bold'>
+          <p className='font-bold dark:text-gray-200'>
             {'Action'}
           </p>
         ),
@@ -258,7 +258,7 @@ const Home = () => {
           return [
             <GridActionsCellItem
               key={`details-${params.id}`}
-              icon={<MdOutlineVisibility />}
+              icon={<MdOutlineVisibility className=" text-xl font-bold text-gray-950" />}
               label="View details"
               onClick={view(params.id as number)}
               showInMenu
@@ -272,7 +272,7 @@ const Home = () => {
             />,
             <GridActionsCellItem
               key={`disable-${params.id}`}
-              icon={<MdDelete />}
+              icon={<MdDelete className='text-xl font-bold text-gray-950' />}
               label="Delete"
               onClick={disable(params.id as number)}
               showInMenu
@@ -376,7 +376,7 @@ const Home = () => {
   }
 
   return (
-    <DefaultLayout headerChildren={<p className="text-blue-900">View all contacts</p>}>
+    <DefaultLayout headerChildren={<p className="text-blue-900 dark:text-gray-200">View all contacts</p>}>
 
       <div className="mx-auto py-10 grid grid-cols-1 gap-8 grow">
         <h6 className="text-blue-900 flex lg:hidden">View all contacts</h6>
@@ -392,13 +392,16 @@ const Home = () => {
             '& .MuiDataGrid-cell': {
               whiteSpace: 'normal',
               wordBreak: 'break-word',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
             },
             '& .MuiDataGrid-toolbarContainer': {
               padding: '1.5rem 1rem',
             },
             '& .MuiButton-text': {
               color: '#000',
+            },
+            '& .MuiDataGrid-columnHeaders': {
+              backgroundColor: 'background.paper',
             },
             '& .css-1eed5fa-MuiInputBase-root-MuiInput-root::after': {
               borderBottom: '2px solid #000'
@@ -414,6 +417,7 @@ const Home = () => {
             },
           }}>
           <DataGrid
+            className="dark:text-gray-300"
             getRowId={(row) => row._id}
             rows={rowsWithGroups}
             columns={columns}

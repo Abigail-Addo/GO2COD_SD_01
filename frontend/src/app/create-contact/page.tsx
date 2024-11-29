@@ -195,5 +195,5 @@ const CreateAdmin = () => {
     )
 }
 
-export default CreateAdmin
+export default CreateAdmin;
 
