@@ -41,7 +41,7 @@ const ContactProfile = () => {
                             </div>
                             <div className="flex flex-col justify-end">
                                 <div className="flex items-center gap-2">
-                                    <h1 className="font-bold text-2xl">{first_name || "N/A"} {last_name || "N/A"}</h1>
+                                    <h1 className="font-bold text-2xl">{first_name || "N/A"} {last_name || ""}</h1>
                                 </div>
                                 <div className="flex pt-4">
                                     {whatsappLink && (
