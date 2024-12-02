@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://contact-manager-go2cod.vercel.app/",
+      "https://contact-manager-go2cod.vercel.app",
     ],
     credentials: true,
   })
