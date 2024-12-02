@@ -26,9 +26,10 @@ const ContactProfile = () => {
         : null;
 
     return (
-        <DefaultLayout headerChildren={<p className="text-red-700">Contact Profile</p>}>
+        <DefaultLayout headerChildren={<p className="text-blue-900 dark:text-gray-200">Contact Profile</p>}>
             <div className="mx-auto h-fit py-10 grid grid-cols-1 gap-8">
-                <h6 className="text-red-700 flex lg:hidden">Contact Profile</h6>
+                <h6 className="text-blue-900 flex lg:hidden">Contact Profile</h6>
+
                 <div className="border border-gray-300 w-full h-full md:w-3/4 mx-auto grid grid-cols-1 gap-4 py-10 rounded">
                     <div className="grid grid-cols-1 gap-8 px-3">
                         <div className="flex gap-4">
