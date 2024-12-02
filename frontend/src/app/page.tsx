@@ -299,6 +299,7 @@ const Home = () => {
     },
   }));
 
+
   //function for the no results overlay
   const CustomNoResultsOverlay = () => {
     return (
@@ -421,6 +422,9 @@ const Home = () => {
             getRowId={(row) => row._id}
             rows={rowsWithGroups}
             columns={columns}
+            disableColumnFilter
+            disableColumnSelector
+            disableDensitySelector
             initialState={{
               pagination: {
                 paginationModel: {
