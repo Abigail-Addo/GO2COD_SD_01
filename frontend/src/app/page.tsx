@@ -72,6 +72,10 @@ const Home = () => {
 
   // Prepare contacts data
   const rowsWithGroups = React.useMemo(() => {
+    if (!Array.isArray(contacts)) {
+      return [];
+    }
+
     const formattedContacts = contacts
       .map(contact => ({
         ...contact,
@@ -81,6 +85,7 @@ const Home = () => {
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
 
+    // Group contacts by their first letter
     const groupedContacts = formattedContacts.reduce((groups, contact) => {
       const letter = contact.name.charAt(0).toUpperCase();
       if (!groups[letter]) {
