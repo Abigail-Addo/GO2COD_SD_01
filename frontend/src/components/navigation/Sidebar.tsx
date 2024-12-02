@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
                             />
                         </div>
                         {toggle && (
-                            <h3 className="my-auto ms-2 text-xl">Contact <span className="text-blue-900">Manager</span></h3>
+                            <h3 className="my-auto ms-2 text-xl">Connect<span className="text-blue-900">LY</span></h3>
                         )}
                     </div>
                     {/* Menu Toggle */}
