@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [
+      "http://localhost:3000",
+      "https://contact-manager-go2cod.vercel.app/",
+    ],
     credentials: true,
   })
 );
