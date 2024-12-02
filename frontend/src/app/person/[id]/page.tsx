@@ -3,7 +3,7 @@
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import DefaultLayout from "@/app/DefaultLayout";
-import { FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { BiLogoWhatsapp, BiLogoTelegram } from "react-icons/bi";
 
 const ContactProfile = () => {
     const searchParams = useSearchParams();
@@ -28,9 +28,9 @@ const ContactProfile = () => {
     return (
         <DefaultLayout headerChildren={<p className="text-blue-900 dark:text-gray-200">Contact Profile</p>}>
             <div className="mx-auto h-fit py-10 grid grid-cols-1 gap-8">
-                <h6 className="text-blue-900 flex lg:hidden">Contact Profile</h6>
+                <h6 className="text-blue-900 flex lg:hidden md:w-3/4 mx-auto">Contact Profile</h6>
 
-                <div className="border border-gray-300 w-full h-full md:w-3/4 mx-auto grid grid-cols-1 gap-4 py-10 rounded">
+                <div className="border border-gray-300 w-full h-full md:w-3/4 lg:w-2/4 mx-auto grid grid-cols-1 gap-4 py-10 rounded">
                     <div className="grid grid-cols-1 gap-8 px-3">
                         <div className="flex gap-4">
                             <div
@@ -39,42 +39,39 @@ const ContactProfile = () => {
                             >
                                 {initials || ""}
                             </div>
-                            <div className="flex items-end gap-2">
-                                {whatsappLink && (
-                                    <a
-                                        href={whatsappLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="pb-2"
-                                    >
-                                        <FaWhatsapp className="text-2xl text-green-500" />
-                                    </a>
-                                )}
-                            </div>
-                            <div className="flex items-end gap-2">
-                                {telegramLink && (
-                                    <a
-                                        href={telegramLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="pb-2"
-                                    >
-                                        <FaTelegram className="text-2xl text-blue-500" />
-                                    </a>
-                                )}
+                            <div className="flex flex-col justify-end">
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-bold text-2xl">{first_name || "N/A"} {last_name || "N/A"}</h1>
+                                </div>
+                                <div className="flex pt-4">
+                                    {whatsappLink && (
+                                        <a
+                                            href={whatsappLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="pb-2flex flex-col"
+                                        >
+                                            <BiLogoWhatsapp className="text-2xl text-gray-500" />
+                                            <p className="text-sm">Whatsapp</p>
+                                        </a>
+                                    )}
+                                    {telegramLink && (
+                                        <a
+                                            href={telegramLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="pb-2flex flex-col"
+                                        >
+                                            <BiLogoTelegram className="text-2xl text-gray-500" />
+                                            <p className="text-sm">Telegram</p>
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-blue-100 md:w-2/4 p-4 rounded-2xl">
+                        <div className="bg-blue-100 w-full p-6 rounded-2xl">
                             <h1 className="font-semibold">Contact Details</h1>
-                            <div className="grid grid-cols-3 gap-2 py-2">
-                                <p>First Name</p>
-                                <h1 className="col-span-2 font-bold">{first_name || "N/A"}</h1>
-                            </div>
-                            <div className="grid grid-cols-3 gap-2">
-                                <p>Last Name</p>
-                                <h1 className="col-span-2 font-bold">{last_name || "N/A"}</h1>
-                            </div>
-                            <div className="grid grid-cols-3 gap-2 py-2">
+                            <div className="grid grid-cols-3 gap-2 py-4">
                                 <p>Email</p>
                                 <h1 className="col-span-2 font-bold">{email || "N/A"}</h1>
                             </div>
