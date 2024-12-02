@@ -43,16 +43,15 @@ const ContactProfile = () => {
                                 <div className="flex items-center gap-2">
                                     <h1 className="font-bold text-2xl">{first_name || "N/A"} {last_name || ""}</h1>
                                 </div>
-                                <div className="flex pt-4">
+                                <div className="flex pt-4 justify-evenly">
                                     {whatsappLink && (
                                         <a
                                             href={whatsappLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="pb-2flex flex-col"
+                                            className="pb-2 flex flex-col"
                                         >
                                             <BiLogoWhatsapp className="text-2xl text-gray-500" />
-                                            <p className="text-sm">Whatsapp</p>
                                         </a>
                                     )}
                                     {telegramLink && (
@@ -60,10 +59,9 @@ const ContactProfile = () => {
                                             href={telegramLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="pb-2flex flex-col"
+                                            className="pb-2 flex flex-col"
                                         >
                                             <BiLogoTelegram className="text-2xl text-gray-500" />
-                                            <p className="text-sm">Telegram</p>
                                         </a>
                                     )}
                                 </div>
