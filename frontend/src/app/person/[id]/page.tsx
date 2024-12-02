@@ -71,11 +71,15 @@ const ContactProfile = () => {
                             <h1 className="font-semibold">Contact Details</h1>
                             <div className="grid grid-cols-3 gap-2 py-4">
                                 <p>Email</p>
-                                <h1 className="col-span-2 font-bold">{email || "N/A"}</h1>
+                                <a href={`mailto:${email}`} className="col-span-2 font-bold">
+                                    {email || "N/A"}
+                                </a>
                             </div>
                             <div className="grid grid-cols-3 gap-2">
                                 <p>Phone Number</p>
-                                <h1 className="col-span-2 font-bold">{phone_number || "N/A"}</h1>
+                                <a href={`tel:${phone_number}`} className="col-span-2 font-bold" >
+                                    {phone_number || "N/A"}
+                                </a>
                             </div>
                         </div>
                     </div>
